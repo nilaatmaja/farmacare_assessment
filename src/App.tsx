@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Pokemons />} />
-        <Route path="/pokemons/:id" element={<Pokemon />} />
+        <Route path="/pokemons/:slug" element={<Pokemon />} />
       </Routes>
     </BrowserRouter>
   );
