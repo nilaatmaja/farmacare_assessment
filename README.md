@@ -1,46 +1,92 @@
-# Getting Started with Create React App
+# Pokemons Black Market
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Description
 
-## Available Scripts
+Pokemons Black Market is a web application built for Team Rocket's operations team to manage the stock of Pokémon. The app allows users to search for Pokémon from the Pokédex, record their stock, and track the history of stock changes. The application is accessible on both desktop and mobile devices, making it easy for field operations.
 
-In the project directory, you can run:
+### Features
 
-### `npm start`
+- **Search Pokédex**: Search for any Pokémon and record its stock.
+- **Stock Management**: Add or update stock quantities and track history of changes.
+- **Cross-platform Accessibility**: Accessible on both desktop and mobile devices for operational flexibility.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Table of Contents
 
-### `npm test`
+1. [Demo](#demo)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Testing](#testing)
+5. [Technologies](#technologies)
+6. [Contributing](#contributing)
+7. [License](#license)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Demo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+https://pokemons-black-market-farmacare.vercel.app/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [Node.js](https://nodejs.org/) (version 14 or higher)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Steps to Install Locally
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+# Clone the repository
+git clone https://github.com/your-username/pokemons-black-market.git
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Navigate to the project folder
+cd pokemons-black-market
 
-## Learn More
+# Install dependencies
+npm install
+# or
+yarn install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Run the development server
+npm start
+# or
+yarn start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This will start the app on `http://localhost:3000`.
+
+---
+
+## Usage
+
+Once installed, you can search for Pokémon, manage stock levels, and view stock history directly within the app. The app supports offline functionality and can be installed as a PWA.
+
+---
+
+## Testing
+
+### Run Unit Tests
+
+The project includes unit tests built with a Test-Driven Development (TDD) approach for some components.
+
+To run the tests, use the following command:
+
+```bash
+npm test
+# or
+yarn test
+```
+
+---
+
+## Technologies
+
+- **React** (version 18)
+- **TypeScript**
+- **Zustand** (state management)
+- **TailwindCSS** (styling)
+- **Create React App** (CRA) with Progressive Web App (PWA) support
