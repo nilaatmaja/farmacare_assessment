@@ -33,7 +33,9 @@ export default function Pokemon() {
       <div className="p-4 md:p-10">
         <div className="space-y-6">
           <div className="space-y-6">
-            <h1 className="text-heading1 capitalize">{pokemon?.name || '-'}</h1>
+            <h1 className="text-heading1 capitalize" data-testid="pokemon-name">
+              {pokemon?.name || '-'}
+            </h1>
             {isMobile && (
               <Button
                 variant="outline"
@@ -43,7 +45,9 @@ export default function Pokemon() {
             )}
             <div>
               <p className="text-sm">Sisa stok</p>
-              <span className="text-[32px] leading-[40px]">
+              <span
+                className="text-[32px] leading-[40px]"
+                data-testid="pokemon-stock">
                 {pokemon?.stock || 0} pcs
               </span>
             </div>

@@ -62,7 +62,9 @@ export default function PokemonsTable({ isLoading, searchTerm }: Props) {
                 onClick={() => {
                   navigate(`/pokemons/${item.name}`);
                 }}>
-                <TableCell className="text-primary font-bold px-0 py-3 capitalize">
+                <TableCell
+                  className="text-primary font-bold px-0 py-3 capitalize"
+                  data-testid="pokemon-name-cell">
                   {item.name}
                 </TableCell>
                 <TableCell className="text-right font-bold px-0 py-3">

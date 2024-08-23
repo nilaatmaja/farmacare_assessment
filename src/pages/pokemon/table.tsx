@@ -101,7 +101,9 @@ export default function PokemonHistoryTable({ isLoading, data = [] }: Props) {
                 </TableRow>
               ) : (
                 [...data].reverse().map((item, index) => (
-                  <TableRow key={`riwayat-${index}`}>
+                  <TableRow
+                    key={`riwayat-${index}`}
+                    data-testid="pokemon-stock-history-row">
                     <TableCell className="text-left px-0 py-3 capitalize">
                       {moment(item.createdAt).format('DD MMM YYYY, HH:mm')}
                     </TableCell>
@@ -112,6 +114,7 @@ export default function PokemonHistoryTable({ isLoading, data = [] }: Props) {
                       {item.note}
                     </TableCell>
                     <TableCell
+                      data-testid={`pokemon-stock-jmlh-${index}`}
                       className={cn(
                         'text-right px-0 py-3',
                         item.stockAfterUpdate - item.stockBeforeUpdate > 0 &&

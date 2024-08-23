@@ -15,6 +15,7 @@ export default function Pokemons() {
           <h1 className="text-heading1">Stok Pok&#233;mon</h1>
 
           <Input
+            data-testid="search-pokemon"
             placeholder="Cari Pok&#233;mon"
             leftIcon={<SearchIcon />}
             iconClassName={{ leftIcon: 'text-primary' }}

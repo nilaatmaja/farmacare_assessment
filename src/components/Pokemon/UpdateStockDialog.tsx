@@ -137,6 +137,7 @@ export default function UpdateStockDialog({ selectedId = '' }: Props) {
                       <span className="min-w-7">1 x</span>
                       <div className="max-w-12">
                         <Input
+                          data-testid="pcs-input"
                           value={values?.pcs ?? ''}
                           type="number"
                           onChange={(e) =>
@@ -148,7 +149,9 @@ export default function UpdateStockDialog({ selectedId = '' }: Props) {
                       <span>=</span>
                     </div>
                   </TableCell>
-                  <TableCell className="text-right px-0 py-3 w-10 overflow-hidden">
+                  <TableCell
+                    className="text-right px-0 py-3 w-10 overflow-hidden"
+                    data-testid="pcs-result">
                     {values?.pcs ?? 0}
                   </TableCell>
                 </TableRow>
@@ -162,6 +165,7 @@ export default function UpdateStockDialog({ selectedId = '' }: Props) {
                       <span className="min-w-7">12 x</span>
                       <div className="max-w-12">
                         <Input
+                          data-testid="doz-input"
                           value={values?.doz ?? ''}
                           type="number"
                           onChange={(e) =>
@@ -173,8 +177,10 @@ export default function UpdateStockDialog({ selectedId = '' }: Props) {
                       <span>=</span>
                     </div>
                   </TableCell>
-                  <TableCell className="text-right px-0 py-3 w-10 overflow-hidden">
-                    {values?.doz ?? 0 * 12}
+                  <TableCell
+                    className="text-right px-0 py-3 w-10 overflow-hidden"
+                    data-testid="doz-result">
+                    {(values?.doz ?? 0) * 12}
                   </TableCell>
                 </TableRow>
               </TableBody>
@@ -183,7 +189,7 @@ export default function UpdateStockDialog({ selectedId = '' }: Props) {
               <p>
                 <b>Total stok</b> (dalam pcs)
               </p>
-              <span>{totalStock}</span>
+              <span data-testid="total-stock">{totalStock}</span>
             </div>
           </div>
           <div className="flex w-full justify-end gap-x-3 mt-6">
